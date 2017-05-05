@@ -1,0 +1,17 @@
+import pyqrcode
+import urllib
+def generate_qr():
+
+    if other_color == "white":
+        url = 'http://s3.amazonaws.com/mycolorfuldresses/white_dresses.jpg'
+    if other_color == "yellow":
+        url = 'http://s3.amazonaws.com/mycolorfuldresses/yellow_dress.jpg'
+    if other_color == "green":
+        url = 'http://s3.amazonaws.com/mycolorfuldresses/green_neon.jpg'
+    else:
+        url = 'http://s3.amazonaws.com/mycolorfuldresses/white_dresses.jpg'
+        
+   
+    qrcode = pyqrcode.create(url)
+    qrcode.png('code.png', scale=6, module_color=[0, 0, 0, 128], background=[0xff, 0xff, 0xcc])
+    qrcode.show()
