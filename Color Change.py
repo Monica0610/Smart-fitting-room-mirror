@@ -30,13 +30,13 @@ def change_color(currColor, newColor):
         for j in range (g[0], g[1]):
             for k in range (b[0], b[1]):
                 colore = (i, j, k)
-                white_distance = img2.colorDistance(colore).invert()
-                blobs = white_distance.findBlobs()
+                w_distance = img2.colorDistance(colore).invert()
+                blobs = w_distance.findBlobs()
                 newRGB = colordef(newColor)
                 blobs.draw(color= (newRGB[0], newRGB[1], newRGB[2]), width=-18)
-    d = white_distance.show()
+    d = w_distance.show()
     time.sleep(8)
-    white_distance.save('image.png')
+    w_distance.save('image.png')
     d.quit()
 
 
