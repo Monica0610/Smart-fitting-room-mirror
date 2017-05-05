@@ -1,5 +1,7 @@
 import SimpleCV
 from SimpleCV import Image, Display, Color
+
+colorVariant = 2;
 import def colorRange(c , variant):
     variant
     num = [c - variant, c + variant]
